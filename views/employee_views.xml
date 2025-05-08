@@ -4,15 +4,13 @@
         <field name="name">employee.form</field>
         <field name="model">hr.employee</field>
         <field name="arch" type="xml">
-            <form string="Employee">
+            <form string="Employee" class="o_form_custom">
                 <sheet>
                     <group>
                         <field name="name"/>
                         <field name="job_title"/>
                         <field name="department_id"/>
-                        <field name="email"/>
-                        <field name="phone"/>
-                        <field name="hire_date"/>
+                        <field name="color" widget="colorpicker" options="{'no_create': True}"/>
                     </group>
                 </sheet>
             </form>
@@ -23,11 +21,11 @@
         <field name="name">employee.tree</field>
         <field name="model">hr.employee</field>
         <field name="arch" type="xml">
-            <tree string="Employees">
+            <tree string="Employees" class="o_tree_custom">
                 <field name="name"/>
                 <field name="job_title"/>
                 <field name="department_id"/>
-                <field name="email"/>
+                <field name="color"/>
             </tree>
         </field>
     </record>

@@ -7,10 +7,4 @@ class EmployeeTask(models.Model):
     name = fields.Char(string='Task Name', required=True)
     employee_id = fields.Many2one('hr.employee', string='Assigned Employee')
     due_date = fields.Date(string='Due Date')
-    description = fields.Text(string='Task Description')
-    status = fields.Selection([
-        ('pending', 'Pending'),
-        ('in_progress', 'In Progress'),
-        ('completed', 'Completed')
-    ], string='Status', default='pending')
     # أضف المزيد من الحقول حسب الحاجة
