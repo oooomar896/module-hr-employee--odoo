@@ -1,0 +1,34 @@
+```path=relation_tables_tasks/views/employee_views.xml
+<odoo>
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <form string="Employee">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="job_title"/>
+                        <field name="department_id"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="hire_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_tree" model="ir.ui.view">
+        <field name="name">employee.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Employees">
+                <field name="name"/>
+                <field name="job_title"/>
+                <field name="department_id"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
